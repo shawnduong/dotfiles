@@ -80,7 +80,7 @@ full-at = 99
 ; Label.
 label-full = "POWER 100%"
 label-charging = "POWER %percentage:3:3%%"
-label-discharing = ${self.label-charging}
+label-discharging = "POWER %percentage:3:3%%"
 
 ; --[ Temperature Module ]--
 [module/temperature]
