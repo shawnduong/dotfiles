@@ -33,6 +33,12 @@ index-sort = true
 ; Disable wrapping scroll.
 wrapping-scroll = false
 
+; Format.
+format = <label-state> <label-mode>
+
+; Label mode.
+label-mode = "[ %mode% ] "
+
 ; Focused labels.
 label-focused = %index%
 label-focused-background = #b8f2fe
@@ -59,7 +65,7 @@ label-urgent-padding = 1
 type = internal/xwindow
 
 ; Label.
-label = " %title:0:60:...%  "
+label = " %title:0:75:...%  "
 
 ; Background/foreground color.
 format-background = #b8f2fe
