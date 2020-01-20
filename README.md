@@ -32,6 +32,9 @@ My Arch Linux + i3-gaps + LightDM rice setup.
 - i3lock.sh -> ~/.config/i3/lock.sh
 - .vimrc -> ~/.vimrc
 - polyconfig -> ~/.config/polybar/config
+- img/wallpapers/solid-blue.jpg -> ~/Pictures/Wallpapers/solid-blue.jpg
+- img/wallpapers/solid-blue.jpg -> /usr/share/pixmaps/greeter.jpg
+- img/graphics/lock.png -> /usr/share/pixmaps/lock.png
 
 ## Compton Tweak
 
