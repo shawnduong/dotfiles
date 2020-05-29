@@ -9,8 +9,8 @@ height = 20
 font-0 = DejaVu Sans Mono:pixelsize=9:antialias=true:hinting=true;2
 
 ; Background/foreground colors.
-background = #253033
-foreground = #dfdfdf
+background = #030405
+foreground = #888888
 
 ; Right-hand padding.
 padding-right = 2
@@ -21,7 +21,7 @@ line-color = #b8f2fe
 
 ; Modules ordering.
 modules-left = i3 xwindow
-modules-right = time network cpu ram pulseaudio temperature battery
+modules-right = time network cpu ram pulseaudio temperature inbattery battery
 
 ; --[ i3 Module ]--
 [module/i3]
@@ -41,14 +41,14 @@ label-mode = "[ %mode% ] "
 
 ; Focused labels.
 label-focused = %index%
-label-focused-background = #b8f2fe
-label-focused-foreground = #253033
+label-focused-background = #00000000
+label-focused-foreground = #888888
 label-focused-padding = 1
 
 ; Unfocused labels.
 label-unfocused = %index%
-label-unfocused-background = #93c1cb
-label-unfocused-foreground = #50595b
+label-unfocused-background = #33000000
+label-unfocused-foreground = #555555
 label-unfocused-padding = 1
 
 ; Visible labels.
@@ -65,16 +65,33 @@ label-urgent-padding = 1
 type = internal/xwindow
 
 ; Label.
-label = " %title:0:75:...%  "
+label = " %title:0:64:...%  "
 
 ; Background/foreground color.
-format-background = #b8f2fe
-format-foreground = #253033
+format-background = #00000000
+format-foreground = #888888
+
+; --[ Internal Battery Module ]--
+[module/inbattery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+
+; Refresh rate.
+poll-interval = 5
+
+; Battery fix.
+full-at = 97
+
+; Label.
+label-full = "POWER 100%i"
+label-charging = "POWER %percentage:3:3%%i"
+label-discharging = "POWER %percentage:3:3%%i"
 
 ; --[ Battery Module ]--
 [module/battery]
 type = internal/battery
-battery = BAT0
+battery = BAT1
 adapter = AC
 
 ; Refresh rate.
@@ -84,14 +101,17 @@ poll-interval = 5
 full-at = 99
 
 ; Label.
-label-full = "POWER 100%"
-label-charging = "POWER %percentage:3:3%%"
-label-discharging = "POWER %percentage:3:3%%"
+label-full = " 100%e"
+label-charging = " %percentage:3:3%%e"
+label-discharging = " %percentage:3:3%%e"
 
 ; --[ Temperature Module ]--
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
+
+; Formatting fix.
+warn-temperature = 999
 
 ; Label.
 label = "HEAT %temperature-c:3:3% / "
@@ -144,4 +164,3 @@ interval = 1
 date = "%a %b %d"
 time = "%H:%M:%S"
 label = "%date% %time% / "
-
