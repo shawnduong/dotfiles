@@ -184,3 +184,9 @@ bindsym --release Print exec --no-startup-id scrot 'scr_%Y%m%d_%H%M%S.png' -e 'm
 # Multiscreen binds.
 bindsym $mod+m exec --no-startup-id xrandr --output DP-2 --auto --right-of eDP-1
 bindsym $mod+shift+m exec --no-startup-id xrandr --output DP-2 --off
+
+# Bluetooth connect bind (assumes already paired).
+bindsym $mod+c exec --no-startup-id bluetoothctl -- connect <DEVICE_ADDRESS_HERE>
+
+# Wacom to primary monitor bind.
+bindsym $mod+x exec --no-startup-id xsetwacom set "Wacom One by Wacom S Pen stylus" MapToOutput eDP-1
