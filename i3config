@@ -190,3 +190,8 @@ bindsym $mod+c exec --no-startup-id bluetoothctl -- connect <DEVICE_ADDRESS_HERE
 
 # Wacom to primary monitor bind.
 bindsym $mod+x exec --no-startup-id xsetwacom set "Wacom One by Wacom S Pen stylus" MapToOutput eDP-1
+
+# cmus binds.
+bindsym XF86AudioPlay exec --no-startup-id cmus-remote --pause
+bindsym XF86AudioNext exec --no-startup-id cmus-remote --next
+bindsym XF86AudioPrev exec --no-startup-id cmus-remote --prev
