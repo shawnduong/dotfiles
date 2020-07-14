@@ -150,6 +150,9 @@ exec_always --no-startup-id xset s off
 exec_always --no-startup-id xset -dpms
 exec_always --no-startup-id xset s noblank
 
+# Disable beep.
+exec_always --no-startup-id xset b off
+
 # Start picom.
 exec_always --no-startup-id killall picom; picom
 
