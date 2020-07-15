@@ -23,7 +23,7 @@ URxvt*boldFont: xft:Source Code Pro:bold:pixelsize=14:antialias=true:hinting=tru
 # Disable scrollbar.
 URxvt*scrollBar: false
 
-# Fix Vim Keys
+# Fix Vim Keys.
 URxvt.keysym.Control-Down:  \033[1;5B
 URxvt.keysym.Control-Up:    \033[1;5A
 URxvt.keysym.Control-Left:  \033[1;5D
@@ -32,3 +32,21 @@ URxvt.keysym.Control-Right: \033[1;5C
 # Disable CTRL+SHIFT bindings.
 URxvt.iso14755: false
 URxvt.iso14755_52: false
+
+# Terminal scheme Monokai dark.
+URxvt.color0:  #272822
+URxvt.color1:  #f92672
+URxvt.color2:  #a6e22e
+URxvt.color3:  #f4bf75
+URxvt.color4:  #66d9ef
+URxvt.color5:  #ae81ff
+URxvt.color6:  #a1efe4
+URxvt.color7:  #f8f8f2
+URxvt.color8:  #75715e
+URxvt.color9:  #f92672
+URxvt.color10: #a6e22e
+URxvt.color11: #f4bf75
+URxvt.color12: #66d9ef
+URxvt.color13: #ae81ff
+URxvt.color14: #a1efe4
+URxvt.color15: #f9f8f5
