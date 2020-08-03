@@ -19,6 +19,8 @@ URxvt*background: #000000
 # Source Code Pro font.
 URxvt*font: xft:Source Code Pro:pixelsize=14:antialias=true:hinting=true
 URxvt*boldFont: xft:Source Code Pro:bold:pixelsize=14:antialias=true:hinting=true
+#URxvt*font: xft:Source Code Pro:pixelsize=24:antialias=true:hinting=true
+#URxvt*boldFont: xft:Source Code Pro:bold:pixelsize=24:antialias=true:hinting=true
 
 # Disable scrollbar.
 URxvt*scrollBar: false

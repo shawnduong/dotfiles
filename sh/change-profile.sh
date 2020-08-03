@@ -15,4 +15,5 @@ else
 	source $BASE/profiles/$PROFILE
 	ln -sf -T "$wallpaper" $BASE/profiles/wallpaper
 	cp "$statusbar" ~/.config/polybar/config
+	i3-msg restart 1>/dev/null
 fi

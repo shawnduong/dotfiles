@@ -8,7 +8,7 @@ PS1="\[\033[0;36m\][\u@\h:\w] $ \[\033[0;0m\]"
 LS_COLORS=$LS_COLORS:'di=1;36:' ; export LS_COLORS
 
 # Setting ruby paths.
-export PATH="/home/skat/.gem/ruby/2.6.0/bin:$PATH"
+export PATH="/home/skat/.gem/ruby/2.7.0/bin:$PATH"
 
 # Terminal/vim reminders.
 alias :q="echo \"You're not in vim, dumbass.\""
@@ -36,3 +36,6 @@ alias reset="reset -Q"
 
 # Allow copying to the clipboard.
 alias xclip='xclip -selection clipboard'
+
+# Disable terminal beep.
+xset b off 2>/dev/null

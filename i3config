@@ -96,16 +96,16 @@ bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
 # Lock workspace 2 to a second monitor.
-workspace 1 output eDP-1
-workspace 2 output DP-2
-workspace 3 output eDP-1
-workspace 4 output eDP-1
-workspace 5 output eDP-1
-workspace 6 output eDP-1
-workspace 7 output eDP-1
-workspace 8 output eDP-1
-workspace 9 output eDP-1
-workspace 10 output eDP-1
+workspace 1 output LVDS-1
+workspace 2 output VGA-1
+workspace 3 output LVDS-1
+workspace 4 output LVDS-1
+workspace 5 output LVDS-1
+workspace 6 output LVDS-1
+workspace 7 output LVDS-1
+workspace 8 output LVDS-1
+workspace 9 output LVDS-1
+workspace 10 output LVDS-1
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -150,9 +150,6 @@ exec_always --no-startup-id xset s off
 exec_always --no-startup-id xset -dpms
 exec_always --no-startup-id xset s noblank
 
-# Disable beep.
-exec_always --no-startup-id xset b off
-
 # Start picom.
 exec_always --no-startup-id killall picom; picom
 
@@ -185,16 +182,16 @@ exec_always --no-startup-id killall polybar; polybar poly
 bindsym --release Print exec --no-startup-id scrot 'scr_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/pic/screen/ && mv $f ~/pic/screen/'
 
 # Multiscreen binds.
-bindsym $mod+m exec --no-startup-id xrandr --output DP-2 --auto --right-of eDP-1
-bindsym $mod+shift+m exec --no-startup-id xrandr --output DP-2 --off
-
-# Bluetooth connect bind (assumes already paired).
-bindsym $mod+c exec --no-startup-id bluetoothctl -- connect <DEVICE_ADDRESS_HERE>
+bindsym $mod+m exec --no-startup-id xrandr --output VGA-1 --auto --right-of LVDS-1
+bindsym $mod+shift+m exec --no-startup-id xrandr --output VGA-1 --off
 
 # Wacom to primary monitor bind.
-bindsym $mod+x exec --no-startup-id xsetwacom set "Wacom One by Wacom S Pen stylus" MapToOutput eDP-1
+bindsym $mod+x exec --no-startup-id xsetwacom set "Wacom One by Wacom S Pen stylus" MapToOutput LVDS-1
 
 # cmus binds.
 bindsym XF86AudioPlay exec --no-startup-id cmus-remote --pause
 bindsym XF86AudioNext exec --no-startup-id cmus-remote --next
 bindsym XF86AudioPrev exec --no-startup-id cmus-remote --prev
+
+# Cool-retro-term bind.
+bindsym $mod+t exec --no-startup-id cool-retro-term --fullscreen

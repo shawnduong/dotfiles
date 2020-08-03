@@ -34,3 +34,10 @@ set timeout timeoutlen=100 ttimeoutlen=100
 
 " Don't wrap lines by default.
 set nowrap
+
+" Markdown settings.
+autocmd Filetype markdown set wrap
+autocmd Filetype markdown set spell
+
+" Disable F1 help menu.
+nmap <F1> <nop>

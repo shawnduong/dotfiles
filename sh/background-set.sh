@@ -1,3 +1,3 @@
 #!/bin/sh
 
-feh --no-fehbg --bg-scale ~/sh/profiles/wallpaper 2>/dev/null
+feh --no-fehbg --bg-fill ~/sh/profiles/wallpaper 2>/dev/null
