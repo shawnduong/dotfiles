@@ -95,9 +95,9 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-# Lock workspace 2 to a second monitor.
-workspace 1 output LVDS-1
-workspace 2 output VGA-1
+# Lock workspace 1 to a second monitor.
+workspace 1 output VGA-1
+workspace 2 output LVDS-1
 workspace 3 output LVDS-1
 workspace 4 output LVDS-1
 workspace 5 output LVDS-1
@@ -182,8 +182,11 @@ exec_always --no-startup-id killall polybar; polybar poly
 bindsym --release Print exec --no-startup-id scrot 'scr_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/pic/screen/ && mv $f ~/pic/screen/'
 
 # Multiscreen binds.
-bindsym $mod+m exec --no-startup-id xrandr --output VGA-1 --auto --right-of LVDS-1
-bindsym $mod+shift+m exec --no-startup-id xrandr --output VGA-1 --off
+bindsym $mod+m exec --no-startup-id "xrandr --output VGA-1 --auto --left-of LVDS-1; i3-msg restart"
+bindsym $mod+shift+m exec --no-startup-id "xrandr --output VGA-1 --off; i3-msg restart"
+
+# Bluetooth connect bind (assumes already paired).
+bindsym $mod+c exec --no-startup-id bluetoothctl -- connect YO:UR:AD:DR:HE:RE
 
 # Wacom to primary monitor bind.
 bindsym $mod+x exec --no-startup-id xsetwacom set "Wacom One by Wacom S Pen stylus" MapToOutput LVDS-1

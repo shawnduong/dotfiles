@@ -35,7 +35,13 @@ alias note="vim ~/.note"
 alias reset="reset -Q"
 
 # Allow copying to the clipboard.
-alias xclip='xclip -selection clipboard'
+alias xclip="xclip -selection clipboard"
 
 # Disable terminal beep.
 xset b off 2>/dev/null
+
+# Get rid of annoying __pycache__ at the expense of a little speed.
+export PYTHONDONTWRITEBYTECODE=1
+
+# Tree without escapes.
+alias tree="tree -N"

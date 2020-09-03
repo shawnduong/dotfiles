@@ -40,4 +40,5 @@ autocmd Filetype markdown set wrap
 autocmd Filetype markdown set spell
 
 " Disable F1 help menu.
-nmap <F1> <nop>
+map <F1> <Esc>
+imap <F1> <Esc>
