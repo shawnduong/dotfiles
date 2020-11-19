@@ -10,6 +10,9 @@ LS_COLORS=$LS_COLORS:'di=1;36:' ; export LS_COLORS
 # Setting ruby paths.
 export PATH="/home/skat/.gem/ruby/2.7.0/bin:$PATH"
 
+# Setting composer paths.
+export PATH="/home/skat/.config/composer/vendor/bin:$PATH"
+
 # Terminal/vim reminders.
 alias :q="echo \"You're not in vim, dumbass.\""
 alias :q!="echo \"You're not in vim, dumbass.\""
@@ -26,10 +29,13 @@ alias gdb="gdb -q"
 alias latexclean="rm *.aux *.dvi *.fdb_latexmk *.fls *.log *.nav *.out *.snm *.toc 2>/dev/null"
 
 # Enable ls colors by default.
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --group-directories-first'
 
 # Make a note.
 alias note="vim ~/.note"
+
+# Print notes.
+alias notes="cat ~/.note"
 
 # Disable "Erase is backspace" message and others.
 alias reset="reset -Q"
@@ -45,3 +51,10 @@ export PYTHONDONTWRITEBYTECODE=1
 
 # Tree without escapes.
 alias tree="tree -N"
+
+# Concatenate videos in a playlist.txt to output.mp4.
+alias vidcombine="ffmpeg -f concat -safe 0 -i playlist.txt -c copy output.mp4"
+
+# ASLR on/off
+alias aslroff="echo 0 | sudo tee /proc/sys/kernel/randomize_va_space"
+alias aslron="echo 2 | sudo tee /proc/sys/kernel/randomize_va_space"

@@ -39,6 +39,11 @@ set nowrap
 autocmd Filetype markdown set wrap
 autocmd Filetype markdown set spell
 
+" LaTeX settings.
+autocmd Filetype tex set wrap
+autocmd Filetype tex set spell
+autocmd Filetype tex autocmd BufWritePost * !pdflatex "%"
+
 " Disable F1 help menu.
 map <F1> <Esc>
 imap <F1> <Esc>
