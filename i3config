@@ -51,6 +51,12 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# Move focused window using hjkl.
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
 # Split horizontally.
 bindsym $mod+b split h
 
@@ -173,7 +179,7 @@ floating_minimum_size 128x128
 floating_maximum_size 1280x720
 
 # Lock bind.
-bindsym $mod+shift+l exec --no-startup-id ~/sh/lock.sh
+bindsym $mod+alt+l exec --no-startup-id ~/sh/lock.sh
 
 # Enable unclutter.
 exec_always --no-startup-id killall unclutter; unclutter --timeout 1
