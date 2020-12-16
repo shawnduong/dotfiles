@@ -179,7 +179,7 @@ floating_minimum_size 128x128
 floating_maximum_size 1280x720
 
 # Lock bind.
-bindsym $mod+alt+l exec --no-startup-id ~/sh/lock.sh
+bindsym $mod+ctrl+l exec --no-startup-id ~/sh/lock.sh
 
 # Enable unclutter.
 exec_always --no-startup-id killall unclutter; unclutter --timeout 1
