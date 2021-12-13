@@ -1,0 +1,9 @@
+#!/bin/sh
+
+LWALL=~/sh/profiles/active/wallpaper2
+
+if [[ -f "$LWALL" ]]; then
+	feh --no-fehbg --bg-fill ~/sh/profiles/active/wallpaper ~/sh/profiles/active/wallpaper2 2>/dev/null
+else
+	feh --no-fehbg --bg-fill ~/sh/profiles/active/wallpaper 2>/dev/null
+fi

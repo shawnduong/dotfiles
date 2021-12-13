@@ -1,0 +1,27 @@
+#!/bin/sh
+
+BASE=/home/skat/sh
+
+mkdir -p $BASE/profiles/
+mkdir -p $BASE/profiles/polyconfs/
+
+if [ "$1" == "" ]; then
+	echo "Usage: $0 <PROFILE>"
+	echo "Profiles are located in $BASE/profiles/"
+	echo "Available profiles:"
+	echo "$(ls $BASE/profiles/ | grep '.*\.profile')"
+else
+	PROFILE="$1"
+	source $BASE/profiles/$PROFILE
+	rm $BASE/profiles/active/* 2>/dev/null
+	ln -sf -T "$wallpaper" $BASE/profiles/active/wallpaper
+	ln -sf -T "$wallpaper2" $BASE/profiles/active/wallpaper2 2>/dev/null
+	ln -sf -T "$lockscreen" ~/.cache/i3lock/lockscreen
+	cp "$statusbar" ~/.config/polybar/config
+	cp "$rofi" ~/.config/rofi/config.rasi
+	cp $BASE/profiles/vim/baserc ~/.vimrc
+	cat $vim >> ~/.vimrc
+	cp $BASE/profiles/bash/baserc ~/.bashrc
+	cat $bash >> ~/.bashrc
+	i3-msg restart 1>/dev/null
+fi

@@ -1,0 +1,64 @@
+configuration {
+	modi: "drun";
+	font: "Source Code Pro 12";
+}
+
+* {
+	--background-color:  #20123A;
+	--font-color:        #F7F7F7;
+	--accent-color:      #774ED1;
+	--highlight-color:   #4A2B8A;
+	--border-color:      #673EC1;
+}
+
+window {
+	background-color: var(--background-color);
+	border: 1px;
+	border-color: var(--accent-color);
+	border-radius: 8px;
+	height: 620px;
+	text-color: var(--font-color);
+	width: 512px;
+}
+
+inputbar {
+	background-color: var(--background-color);
+	border: 0px 0px 1px 0px;
+	border-color: var(--border-color);
+	padding: 16px;
+	text-color: var(--font-color);
+}
+
+prompt {
+	background-color: var(--background-color);
+	text-color: var(--font-color);
+}
+
+listview {
+	border: 0px;
+	scrollbar: false;
+}
+
+element {
+	padding: 16px;
+}
+
+element normal.normal {
+	background-color: var(--background-color);
+	text-color: var(--font-color);
+}
+
+element alternate.normal {
+	background-color: var(--background-color);
+	text-color: var(--font-color);
+}
+
+element selected.normal {
+	background-color: var(--highlight-color);
+	text-color: var(--font-color);
+}
+
+entry {
+	text-color: var(--font-color);
+	placeholder: "";
+}
