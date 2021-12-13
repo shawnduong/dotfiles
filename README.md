@@ -1,5 +1,10 @@
 # dotfiles
 
-My dotfiles for my Arch Linux setup.
+I use Arch, btw.
 
-You can follow my installation instructions from start to finish using my [blog post](https://shawnduong.github.io/ThinkPad-x250-Build).
+## Screenshots
+
+![](./sc/01.png)
+![](./sc/02.png)
+![](./sc/03.png)
+![](./sc/04.png)
